@@ -8,7 +8,7 @@ Execute the example.sh script or manually execute the commands inside to see how
 bash example.sh
 ```
 
-Run the following in 2 different windows to view both the build in the chain
+Run the following in 2 different windows to view both of the builds in the chain
 
 ```
 while true; do clear; oc logs bc/builder -f; sleep 2; done
