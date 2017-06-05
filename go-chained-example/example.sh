@@ -22,6 +22,8 @@ sleep 1
 
 oc logs -f bc/runtime --follow
 
+sleep 1
+
 # Deploy and expose the app once built
 oc new-app runtime --name=my-application
 oc expose svc/my-application
