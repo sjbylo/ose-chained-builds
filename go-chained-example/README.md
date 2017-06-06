@@ -1,10 +1,10 @@
-# Example Go builder using a build chain
+# Example Golang builder using a build chain
 
 ### Thanks to Jorge's examples in his blog: https://blog.openshift.com/chaining-builds/ 
 
 Execute the example.sh script or manually execute the following commands to see how it works.
 
-Step-by-step, manual execution.
+## Step-by-step, manual execution.
 
 Create a new project (optional).
 
@@ -12,13 +12,13 @@ Create a new project (optional).
 oc new-project go-chained-example
 ```
 
-Import this go builder image.  This command will set up an Image Stream which points to the image. 
+Import this go builder image.  This command will set up an Image Stream which points to the builder image. 
 
 ```
 oc import-image jorgemoralespou/s2i-go --confirm
 ```
 
-Create the Build Configurtion called "builder", which consists of the go s2i builder image, references the git repo for ths go source code.
+Create the Build Configurtion with the name of "builder".  This consists of the go s2i builder image and references the git repo for the example go source code.
 
 ```
 oc new-build s2i-go~https://github.com/sjbylo/ose-chained-builds \
@@ -26,7 +26,7 @@ oc new-build s2i-go~https://github.com/sjbylo/ose-chained-builds \
    --name=builder
 ```
 
-Watch the build logs.
+Watch the 1st build logs.
 
 ```
 oc logs -f bc/builder --follow
@@ -46,13 +46,13 @@ oc new-build --name=runtime \
    --strategy=docker
 ```
 
-Watch the build logs.
+Watch the 2nd build logs.
 
 ```
 oc logs -f bc/runtime --follow
 ```
 
-Deploy and expose the app once built
+Deploy and expose the app once built.
 
 ```
 oc new-app runtime --name=my-application
@@ -65,11 +65,13 @@ Print the endpoint URL and visit it in your browser.
 oc get route/my-application -o jsonpath='{.status.ingress[0].host}'
 ```
 
-# Run the script. 
+## Or just run the script
 
 ```
 bash example.sh
 ```
+
+## Demo
 
 Run the following in 2 different windows to view both of the builds in the chain
 
