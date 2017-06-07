@@ -26,7 +26,7 @@ oc new-build s2i-go~https://github.com/sjbylo/ose-chained-builds \
    --name=builder
 ```
 
-Watch the 1st build logs.
+Watch the 1st "builder" build logs.
 
 ```
 oc logs -f bc/builder --follow
@@ -46,7 +46,7 @@ oc new-build --name=runtime \
    --strategy=docker
 ```
 
-Watch the 2nd build logs.
+Watch the 2nd, "runtime" build logs.
 
 ```
 oc logs -f bc/runtime --follow
