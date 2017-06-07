@@ -2,9 +2,11 @@
 
 ### Thanks to Jorge's examples in his blog: https://blog.openshift.com/chaining-builds/ 
 
-Execute the example.sh script or manually execute the following commands to see how it works.
+Here is the [official documentaiton](https://docs.openshift.com/container-platform/3.5/dev_guide/builds/advanced_build_operations.html#dev-guide-chaining-builds)
 
 ![Diagram of chained builds](../diag.png)
+
+Execute the example.sh script or manually execute the following commands to see how it works.
 
 ## Step-by-step, manual execution.
 
