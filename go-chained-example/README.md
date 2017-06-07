@@ -6,8 +6,6 @@ Execute the example.sh script or manually execute the following commands to see 
 
 ![Diagram of chained builds](../diag.png)
 
-![Diagram of chained builds](https://octodex.github.com/images/yaktocat.png)
-
 ## Step-by-step, manual execution.
 
 Create a new project (optional).
