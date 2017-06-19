@@ -13,7 +13,7 @@ Execute the example.sh script or manually execute the following commands to see 
 Create a new project (optional).
 
 ```
-oc new-project go-chained-example
+oc new-project go-chained-example   # This is optional! 
 ```
 
 Import this go builder image.  This command will set up an Image Stream which points to the builder image. 
