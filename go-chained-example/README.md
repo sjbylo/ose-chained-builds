@@ -38,7 +38,7 @@ oc logs -f bc/builder --follow
 
 The generated go executable is located in /opt/app-root/src/go/src/main/main
 
-Create a new Build Configuraiton which uses the just created builder image as input, copies the go executable over into a new runtime container. 
+Create a new Build Configuraiton which uses the just created image as input, copies the go executable over into a new runtime container. 
 A Dockerfile is used to build the runtime image. 
 
 ```
